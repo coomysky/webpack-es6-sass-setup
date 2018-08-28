@@ -1,8 +1,16 @@
 'use strict';
 
 
+import 'lodash';
 import './styles';
+import { SocialService } from './services';
 
-var appContainer = document.querySelector('#app');
+function init() {
+  const socialService = new SocialService();
+  socialService.getSocial();
+}
 
-appContainer.innerHTML = '<div class="main-component"><h1 class="main-component__title">Welcome!</h1></div>';
+init();
+
+
+

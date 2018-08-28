@@ -3,14 +3,9 @@
 
 import 'lodash';
 import './styles';
-import { SocialService } from './services';
+import { TrackOffController } from './controllers';
 
-function init() {
-  const socialService = new SocialService();
-  socialService.getSocial();
-}
-
-init();
-
+const trackeOffController = new TrackOffController();
+trackeOffController.init();
 
 

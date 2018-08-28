@@ -1,5 +1,5 @@
 export default class SocialService {
-  constructor(height, width) {
+  constructor() {
     this.socialDomainsObj = [{
           domain: "https://squareup.com",
           redirect: "/login?return_to=%2Ffavicon.ico",
@@ -151,15 +151,29 @@ export default class SocialService {
           name: "VK",
           fa: "fab fa-vk"
       }];
-
-    this.socialData = 0;
   }
 
-  getSocial() {
-    _.forEach(this.socialDomainsObj, function(social) {
-      console.log(social);
+
+  getSocials() {
+    const promises = [];
+
+    this.socialDomainsObj.forEach(function(social) {
+      promises.push(
+        new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => {
+            resolve({ social, login: true });
+          };
+          img.onerror = () => {
+            resolve({ social, login: false });
+          };
+            img.src = social.domain + social.redirect;
+        })
+      );
     });
 
+    return Promise.all(promises);
   }
+
 
 };

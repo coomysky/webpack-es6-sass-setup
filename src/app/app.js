@@ -1,6 +1,7 @@
 'use strict';
 
-require('./main.scss');
+
+import './styles';
 
 var appContainer = document.querySelector('#app');
 

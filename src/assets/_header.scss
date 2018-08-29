@@ -1,3 +1,39 @@
 .#{$prefix}-nav {
-  font-size: 1em;
+  font-size: 16px;
+
+  &__li {
+    color: color('light');
+    height: 30px;
+    font-size: 0.8em;
+    line-height: 30px;
+
+    &.--trackoff-log {
+      width: 126px;
+      background-image: url('/src/assets/images/logo-trackoff.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &.--kg-log {
+      width: 80px;
+      background-image: url('/src/assets/images/logo-kidguard.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+  }
+
+  &__text {
+    color: color('light');
+    height: 40px;
+    font-size: 0.8em;
+    a {
+      color: color('light');
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
 }

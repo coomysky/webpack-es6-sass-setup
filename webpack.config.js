@@ -11,7 +11,10 @@ module.exports = {
   entry: './src/app/app.js',
 
   output: {
-    path: __dirname,
+    path: path.join(__dirname, '/dist'),
+
+    publicPath: 'http://localhost:3001/',
+
     filename: 'js/app.js'
   },
 
@@ -49,6 +52,10 @@ module.exports = {
             'sass-loader'
           ]
         })
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+        use: 'file-loader',
       }
     ]
   },

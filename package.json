@@ -51,6 +51,7 @@
     "webpack"
   ],
   "dependencies": {
+    "bowser": "^2.0.0-beta.1",
     "extract-text-webpack-plugin": "^3.0.1",
     "lodash": "^4.17.10",
     "redux": "^4.0.0",

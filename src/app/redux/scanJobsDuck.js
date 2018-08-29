@@ -4,7 +4,9 @@ export const SET_LOGIN_SOCIALS = 'SET_LOGIN_SOCIALS';
 /* REDUCER */
 
 const initState = {
-  items: [],
+  socials: [],
+  status: 'init',
+  browser: {},
 };
 
 export default function reducer(state = initState, action) {
@@ -12,7 +14,7 @@ export default function reducer(state = initState, action) {
     case SET_LOGIN_SOCIALS:
       return {
         ...state,
-        items: action.items,
+        socials: action.socials,
       };
     default:
       return state;
@@ -21,9 +23,9 @@ export default function reducer(state = initState, action) {
 
 /* ACTION CREATORS */
 
-export function setLoginSocials(items) {
+export function setLoginSocials(socials) {
   return {
     type: SET_LOGIN_SOCIALS,
-    items,
+    socials,
   };
 }

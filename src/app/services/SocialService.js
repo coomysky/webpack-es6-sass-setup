@@ -1,9 +1,9 @@
-import { socialStore }  from '../redux';
-import { setLoginSocials } from '../redux/socialJobsDuck';
+import { scanStore }  from '../redux';
+import { setLoginSocials } from '../redux/scanJobsDuck';
 
 export default class SocialService {
   constructor() {
-    this.socialStore = socialStore;
+    this.scanStore = scanStore;
     this.socialDomainsObj = [{
           domain: "https://squareup.com",
           redirect: "/login?return_to=%2Ffavicon.ico",
@@ -179,7 +179,7 @@ export default class SocialService {
 
     Promise.all(promises).then(socials => {
       const loginSocials = socials.filter(social => social.login);
-      this.socialStore.dispatch(setLoginSocials(loginSocials));
+      this.scanStore.dispatch(setLoginSocials(loginSocials));
     });
   }
 

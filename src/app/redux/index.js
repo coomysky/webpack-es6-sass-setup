@@ -1,13 +1,13 @@
 import { applyMiddleware, createStore } from 'redux';
 import logger from 'redux-logger'
 
-import socialJobsDuck from './socialJobsDuck';
+import scanJobsDuck from './scanJobsDuck';
 
-const socialStore = createStore(
-  socialJobsDuck,
+const scanStore = createStore(
+  scanJobsDuck,
   applyMiddleware(logger)
 );
 
 export {
-  socialStore,
+  scanStore,
 };

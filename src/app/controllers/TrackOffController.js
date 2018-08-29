@@ -1,17 +1,21 @@
 import { SocialService } from '../services';
+import { socialStore }  from '../redux';
 
 export default class TrackOffController {
   constructor() {
     this.socialService = new SocialService();
-
+    this.socialStore = socialStore;
   }
 
   init() {
     const socials = this.socialService.getSocials();
-    socials.then(socials => {
-      const loginSocial = socials.filter(social => social.login);
-      document.body.innerHTML = loginSocial.length;
-    });
+
+    this.socialStore.subscribe(() => {
+        document.body.innerHTML = this.socialStore.getState();
+      }
+    );
+
+
   }
 
 };

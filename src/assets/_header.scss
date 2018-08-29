@@ -1,5 +1,6 @@
 .#{$prefix}-nav {
   font-size: 16px;
+  background: rgba(20, 20, 20, 0.164);
 
   &__li {
     color: color('light');
@@ -36,4 +37,15 @@
     }
   }
 
+}
+
+.#{$prefix}-header {
+  height: 70vh;
+  width: 100vw;
+  color: color('light');
+  background: background('dark');
+  background-image: url('/src/assets/images/bg-fold-fp-dark.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

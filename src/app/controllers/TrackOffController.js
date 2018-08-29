@@ -1,17 +1,19 @@
-import { SocialService } from '../services';
+import { SocialService, ScanService } from '../services';
 import { scanStore }  from '../redux';
 
 export default class TrackOffController {
   constructor() {
-    this.socialService = new SocialService();
     this.scanStore = scanStore;
+    this.socialService = new SocialService();
+    this.scanService = new ScanService();
+    this.socialService.getSocials();
   }
 
   init() {
-    const socials = this.socialService.getSocials();
+    const scan = this.scanService.startScan();
 
     this.scanStore.subscribe(() => {
-        document.body.innerHTML = this.scanStore.getState();
+        // document.body.innerHTML = this.scanStore.getState();
       }
     );
   }

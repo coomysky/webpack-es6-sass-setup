@@ -1,5 +1,6 @@
 /* ACTION TYPES */
 export const SET_LOGIN_SOCIALS = 'SET_LOGIN_SOCIALS';
+export const SET_BROWSER_INFO = 'SET_BROWSER_INFO';
 
 /* REDUCER */
 
@@ -16,6 +17,11 @@ export default function reducer(state = initState, action) {
         ...state,
         socials: action.socials,
       };
+    case SET_BROWSER_INFO:
+      return {
+        ...state,
+        browser: action.browser,
+      };
     default:
       return state;
   }
@@ -27,5 +33,12 @@ export function setLoginSocials(socials) {
   return {
     type: SET_LOGIN_SOCIALS,
     socials,
+  };
+}
+
+export function setBrowserInfo(browser) {
+  return {
+    type: SET_BROWSER_INFO,
+    browser,
   };
 }

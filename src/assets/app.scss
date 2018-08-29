@@ -1,13 +1,19 @@
-/** postcss-bem-linter: define main-component; weak */
-$color: red;
 
-.main-component {
-  &__title {
-    color: $color;
-  }
-}
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
 
-/** postcss-bem-linter: define utilities */
-.u-ellipsis {
-  color: $color;
+@import "global/params";
+
+@import "global/color";
+
+@import "global/helper";
+
+@import "global/rwd";
+
+@import "header";
+
+body {
+  font-family: 'Rubik', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 1.6rem;
+  margin: 0;
+  height: 100%;
 }

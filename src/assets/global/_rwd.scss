@@ -1,0 +1,78 @@
+@mixin respond-to($breakpoints) {
+
+  @each $current-breakpoint in $breakpoints {
+
+    @include respond-to-specific($current-breakpoint) {
+
+      @content;
+
+    }
+
+  }
+
+}
+
+@mixin respond-to-specific($breakpoint) {
+
+  @if $breakpoint == "xs" {
+
+    @media (max-width: 767px) {
+
+      @content;
+
+    }
+
+  }
+
+  @if $breakpoint == "sm" {
+
+    @media (min-width: 768px) and (max-width: 991px) {
+
+      @content;
+
+    }
+
+  } @else if $breakpoint == "md" {
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+      @content;
+
+
+    }
+  } @else if $breakpoint == "lg" {
+
+    @media (min-width: 1200px) {
+
+      @content;
+
+    }
+
+  }
+
+  // overrid original bootstrap query on demand
+
+  @if $breakpoint == "iphone5" {
+
+    @media (max-width: 370px) {
+
+      @content;
+
+    }
+
+  }
+
+  @if $breakpoint == "iphoneplus" {
+
+    @media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+
+      @content;
+
+    }
+
+  }
+}

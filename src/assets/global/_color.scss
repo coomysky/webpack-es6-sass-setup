@@ -1,0 +1,25 @@
+$colors: (
+  default: #767676,
+  primary: #5e65b8,
+  light: #fff,
+  success: #2dd26f,
+  danger: #c61716,
+);
+
+$backgrounds: (
+  default: #fff,
+  dark: #132529,
+  primary: #5e65b8,
+);
+
+@function color($color-name) {
+
+  @return map-get($colors, $color-name);
+
+}
+
+@function background($background-name) {
+
+  @return map-get($backgrounds, $background-name);
+
+}

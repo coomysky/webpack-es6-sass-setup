@@ -1,0 +1,35 @@
+.#{$prefix}-intro {
+
+  &__main {
+    background-image: url('/src/assets/images/laptop-trackoff.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+  }
+
+  &__icon {
+    background: color('success');
+    width: 77px;
+    height: 77px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &[data-icon='fingerprint'] {
+      background-image: url('/src/assets/images/ico-fingerprint.svg');
+    }
+
+    &[data-icon='window'] {
+      background-image: url('/src/assets/images/ico-window.svg');
+    }
+
+    &[data-icon='web'] {
+      background-image: url('/src/assets/images/ico-web.svg');
+    }
+  }
+
+  &__text {
+    font-size: 0.8em;
+  }
+
+}

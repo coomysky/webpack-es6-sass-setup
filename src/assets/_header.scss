@@ -49,3 +49,12 @@
   background-position: center;
   background-size: cover;
 }
+
+.#{$prefix}-jumbotron {
+  max-height: 50vh;
+  overflow: hidden;
+  &__p {
+    font-size: 0.9em;
+  }
+}
+

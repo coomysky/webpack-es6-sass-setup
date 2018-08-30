@@ -1,0 +1,27 @@
+
+@each $name, $color in $colors {
+  .#{$prefix}-btn-#{$name} {
+    background:$color;
+    color:#fff;
+    border: 1px solid darken($color,5%);
+
+    &:hover {
+      background: lighten($color, 5%);
+    }
+  }
+}
+
+
+.#{$prefix}-btn {
+  font-size: 1em;
+  display: inline-block;
+  padding: 0.7em 5em;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  cursor: pointer;
+}

@@ -1,0 +1,72 @@
+.#{$prefix}-feature {
+
+  &__text {
+    font-size: 0.7em;
+    color: color('default');
+
+    b {
+      color: color('dark');
+    }
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    border: 1px lighten(color('primary'), 30%) solid;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% 50%;
+    margin-right: 0.7em;
+
+    &.--big {
+      width: 80px;
+      height: 80px;
+    }
+
+    &[data-icon='fingerprint'] {
+      background-image: url('/src/assets/images/fingrepurple.svg');
+    }
+
+    &[data-icon='alert'] {
+      background-image: url('/src/assets/images/alert.svg');
+    }
+
+    &[data-icon='browser'] {
+      background-image: url('/src/assets/images/browser.svg');
+    }
+
+    &[data-icon='earth'] {
+      background-image: url('/src/assets/images/earth.svg');
+    }
+
+    &[data-icon='protect'] {
+      background-image: url('/src/assets/images/protect.svg');
+    }
+
+    &[data-icon='run'] {
+      background-image: url('/src/assets/images/run.svg');
+    }
+
+    &[data-icon='schedule'] {
+      background-image: url('/src/assets/images/schedule.svg');
+    }
+
+    &[data-icon='search'] {
+      background-image: url('/src/assets/images/search.svg');
+    }
+
+    &[data-icon='setting'] {
+      background-image: url('/src/assets/images/setting.svg');
+    }
+
+    &[data-icon='web'] {
+      background-image: url('/src/assets/images/web.svg');
+    }
+
+    &[data-icon='store'] {
+      background-image: url('/src/assets/images/store.svg');
+    }
+
+  }
+}

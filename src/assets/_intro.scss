@@ -9,11 +9,12 @@
 
   &__icon {
     background: color('success');
-    width: 77px;
-    height: 77px;
+    width: 60px;
+    height: 60px;
     border-radius: 100%;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 50% 50%;
 
     &[data-icon='fingerprint'] {
       background-image: url('/src/assets/images/ico-fingerprint.svg');

@@ -54,7 +54,12 @@
   max-height: 50vh;
   overflow: hidden;
   &__p {
-    font-size: 0.9em;
+    font-size: 1em;
+  }
+
+  &__title {
+    font-size: 1.7em;
+    font-weight: 500;
   }
 }
 

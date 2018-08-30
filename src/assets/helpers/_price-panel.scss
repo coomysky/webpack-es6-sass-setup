@@ -1,0 +1,3 @@
+.#{$prefix}-price-panel {
+  @include price-panel (color('primary'), color('success'), 30px);
+}

@@ -9,7 +9,13 @@
 
 @import "global/rwd";
 
+@import "helpers/mixins";
+
 @import "helpers/btns";
+
+@import "helpers/backgrounds";
+
+@import "helpers/price-panel";
 
 @import "header";
 
@@ -17,9 +23,10 @@
 
 @import "feature";
 
+@import "plan";
+
 body {
   font-family: 'Rubik', 'Helvetica', 'Arial', 'sans-serif';
-  font-size: 16px;
   margin: 0;
   height: 100%;
 }

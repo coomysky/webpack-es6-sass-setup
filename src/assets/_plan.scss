@@ -1,0 +1,39 @@
+.#{$prefix}-plan {
+
+  &__li {
+    padding-left: 30px;
+    position: relative;
+    margin: 10px 0;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: color('primary');
+      background-image: url('/src/assets/images/ico-check-white.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50% 50%;
+      border-radius: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+
+    &.--add {
+
+      &:before {
+        background: color('success');
+        background-image: url('/src/assets/images/ico-plus-white.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50% 50%;
+        border-radius: 100%;
+      }
+
+    }
+
+  }
+
+}

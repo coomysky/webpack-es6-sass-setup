@@ -1,6 +1,6 @@
 import { scanStore }  from '../redux';
 import bowser from 'bowser';
-import { setBrowserInfo } from '../redux/scanJobsDuck';
+import { setBrowserInfo, startScan, initScan } from '../redux/scanJobsDuck';
 
 export default class ScanService {
   constructor() {
@@ -18,10 +18,12 @@ export default class ScanService {
       os: null,
       status: 'init',
     }
+    this.scanStore.dispatch(initScan());
   }
 
   async startScan() {
     this.browserInfo.status = 'start';
+    await this.scanStore.dispatch(startScan());
     await this.checkIp();
     await this.checkBrowser();
     await this.scanStore.dispatch(setBrowserInfo(this.browserInfo));

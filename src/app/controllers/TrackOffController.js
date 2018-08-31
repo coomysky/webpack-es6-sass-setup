@@ -14,6 +14,7 @@ export default class TrackOffController {
 
     this.scanStore.subscribe(() => {
         // document.body.innerHTML = this.scanStore.getState();
+
       }
     );
   }

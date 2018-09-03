@@ -1,0 +1,57 @@
+.#{$prefix}-scan {
+
+  &__pop {
+    background-image: url('/src/assets/images/fingerprint-map.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 10px;
+    min-height: 100%;
+    position: relative;
+    color: color('default');
+
+    &.--open {
+      background: #fff;
+    }
+
+    &-close {
+      width: 20px;
+      height: 20px;
+      background-image: url('/src/assets/images/ico-popup-close.svg');
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &__li {
+    padding-left: 20px;
+    position: relative;
+    margin: 5px 0;
+    font-size: 0.9em;
+
+    b {
+      font-weight: 500;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 15px;
+      background-image: url('/src/assets/images/ico-warning.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 2px;
+      left: 0;
+      position: absolute;
+    }
+
+  }
+
+}
